@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/tasbehFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.tasbeh.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentKalimalar"
+            app:destination="@id/fragmentKalimalar" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKalimalar"
+        android:name="com.example.tasbeh.fragment.FragmentKalimalar"
+        android:label="fragment_kalimalar"
+        tools:layout="@layout/fragment_kalimalar" >
+        <action
+            android:id="@+id/action_fragmentKalimalar_to_tasbehFragment"
+            app:destination="@id/tasbehFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/duoFragment"
+        android:name="com.example.tasbeh.fragment.DuoFragment"
+        android:label="fragment_duo"
+        tools:layout="@layout/fragment_duo" />
+    <fragment
+        android:id="@+id/tasbehFragment"
+        android:name="com.example.tasbeh.fragment.TasbehFragment"
+        android:label="fragment_tasbeh"
+        tools:layout="@layout/fragment_tasbeh" >
+        <action
+            android:id="@+id/action_tasbehFragment_to_duoFragment"
+            app:destination="@id/duoFragment" />
+    </fragment>
+</navigation>
